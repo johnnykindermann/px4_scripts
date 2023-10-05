@@ -123,11 +123,11 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    // Delete mission time limit
-    /* if (fut.wait_for(std::chrono::seconds(240)) != std::future_status::ready) {
+    // Extend mission time limit
+    if (fut.wait_for(std::chrono::seconds(1000000)) != std::future_status::ready) {
         std::cerr << "Mission not finished yet, giving up.\n";
         return 1;
-    } */
+    } 
 
     // Mission complete. Command RTL to go home.
     std::cout << "Commanding RTL...\n";

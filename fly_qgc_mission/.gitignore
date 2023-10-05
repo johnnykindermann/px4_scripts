@@ -1,0 +1,4 @@
+# Ignore build output folders
+build/
+bin/
+lib/
